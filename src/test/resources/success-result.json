@@ -1,0 +1,12 @@
+{
+  "settings": {
+    "globals": {
+      "LLM_provider": "LiteLLM",
+      "LLM_API_Key": "over-writing-the-api-key!",
+      "root_dir": "D:\\~JUNCTIONS\\C~Disks~E\\development.2023\\code\\sources\\transhumai\\BlaBlaBlAi",
+      "system_prompt": "Write here the system prompt,\neven on moe lines,\nexplain to the LLM what we are\ngoingo to work on with this project!",
+      "LLM_API_url": "http://localhost:4000/v1",
+      "LLM_model": "gemini/gemini-2.5-pro-exp-03-25"
+    }
+  }
+}

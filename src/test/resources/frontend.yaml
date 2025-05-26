@@ -1,0 +1,8 @@
+settings:
+  globals:
+    LLM_API_Key: over-writing-the-api-key!
+    system_prompt: |
+            Write here the system prompt,
+            even on moe lines,
+            explain to the LLM what we are
+            goingo to work on with this project!

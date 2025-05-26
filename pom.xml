@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <modelVersion>4.0.0</modelVersion>
+
+ <groupId>me.as.lib.format.yaml</groupId>
+ <artifactId>as-libs.format.yaml</artifactId>
+ <version>1.0.0</version>
+ <packaging>jar</packaging>
+
+ <name>as-libs.format.yaml</name>
+ <description>Utility package to handle YAML/JSON files</description>
+ <url>https://github.com/ansorre/as-libs.format.yaml</url>
+
+ <licenses>
+  <license>
+   <name>The Apache License, Version 2.0</name>
+   <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+  </license>
+ </licenses>
+
+ <properties>
+  <java.version>17</java.version>
+  <maven.compiler.source>17</maven.compiler.source>
+  <maven.compiler.target>17</maven.compiler.target>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
+
+
+ <repositories>
+  <repository>
+   <id>jitpack.io</id>
+   <url>https://jitpack.io</url>
+  </repository>
+ </repositories>
+
+
+ <dependencies>
+
+  <dependency>
+   <groupId>com.github.ansorre</groupId>
+   <artifactId>as-libs.core</artifactId>
+   <version>1.1.0</version>
+  </dependency>
+
+  <dependency>
+   <groupId>com.github.ansorre</groupId>
+   <artifactId>as-libs.format.json</artifactId>
+   <version>1.0.0</version>
+  </dependency>
+
+  <dependency>
+   <groupId>com.google.code.gson</groupId>
+   <artifactId>gson</artifactId>
+   <version>2.10.1</version>
+  </dependency>
+
+  <dependency>
+   <groupId>org.snakeyaml</groupId>
+   <artifactId>snakeyaml-engine</artifactId>
+   <version>2.9</version>
+  </dependency>
+
+  <dependency>
+   <groupId>org.junit.jupiter</groupId>
+   <artifactId>junit-jupiter</artifactId>
+   <version>5.10.1</version>
+   <scope>test</scope>
+  </dependency>
+
+ </dependencies>
+
+
+ <build>
+  <plugins>
+
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.8.1</version>
+    <configuration>
+     <encoding>UTF-8</encoding>
+    </configuration>
+   </plugin>
+
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-resources-plugin</artifactId>
+    <version>3.2.0</version>
+    <configuration>
+     <encoding>UTF-8</encoding>
+    </configuration>
+   </plugin>
+
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-source-plugin</artifactId>
+    <version>3.2.1</version>
+    <executions>
+     <execution>
+      <id>attach-sources</id>
+      <goals>
+       <goal>jar-no-fork</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-javadoc-plugin</artifactId>
+    <version>3.5.0</version>
+    <executions>
+     <execution>
+      <id>attach-javadocs</id>
+      <goals>
+       <goal>jar</goal>
+      </goals>
+      <configuration>
+       <failOnError>false</failOnError>
+       <additionalJOption>-Xdoclint:none</additionalJOption>
+      </configuration>
+     </execution>
+    </executions>
+   </plugin>
+
+  </plugins>
+
+ </build>
+
+</project>
