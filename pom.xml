@@ -6,7 +6,7 @@
 
  <groupId>me.as.lib.format.yaml</groupId>
  <artifactId>as-libs.format.yaml</artifactId>
- <version>1.0.0</version>
+ <version>1.0.2</version>
  <packaging>jar</packaging>
 
  <name>as-libs.format.yaml</name>
