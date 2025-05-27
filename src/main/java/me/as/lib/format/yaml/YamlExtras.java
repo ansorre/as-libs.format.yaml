@@ -56,17 +56,10 @@ public class YamlExtras
 
  public static <T> T loadJsonFromYAMLFile(Class<T> clazz, String fname)
  {
-  try
-  {
-   if (StringExtras.isBlank(fname) || !isFile(fname) || fileLength(fname)==0)
-    throw new RuntimeException("Empy or invalid or not existent file or file name '"+fname+"'");
+  if (StringExtras.isBlank(fname) || !isFile(fname) || fileLength(fname)==0)
+   throw new RuntimeException("Empy or invalid or not existent file or file name '"+fname+"'");
 
-   return fromYAMLString(clazz, loadTextFromFile(fname));
-  }
-  catch (Throwable tr)
-  {
-   return null;
-  }
+  return fromYAMLString(clazz, loadTextFromFile(fname));
  }
 
 
