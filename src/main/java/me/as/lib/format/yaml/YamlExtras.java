@@ -19,6 +19,7 @@ package me.as.lib.format.yaml;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import me.as.lib.core.lang.StringExtras;
 import me.as.lib.format.json.JsonExtras;
 import org.snakeyaml.engine.v2.api.Load;
 import org.snakeyaml.engine.v2.api.LoadSettings;
@@ -29,6 +30,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 
+import static me.as.lib.core.system.FileSystemExtras.fileLength;
+import static me.as.lib.core.system.FileSystemExtras.isFile;
 import static me.as.lib.format.json.JsonExtras.KeyConflictPolicy;
 import static me.as.lib.format.json.JsonExtras.ArrayKeyConflictPolicy;
 import static me.as.lib.core.lang.ExceptionExtras.showErrorAtLine;
@@ -55,6 +58,9 @@ public class YamlExtras
  {
   try
   {
+   if (StringExtras.isBlank(fname) || !isFile(fname) || fileLength(fname)==0)
+    throw new RuntimeException("Empy or invalid or not existent file or file name '"+fname+"'");
+
    return fromYAMLString(clazz, loadTextFromFile(fname));
   }
   catch (Throwable tr)
